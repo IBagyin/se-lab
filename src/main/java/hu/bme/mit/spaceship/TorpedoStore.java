@@ -28,6 +28,7 @@ public class TorpedoStore {
       }
     }
   }
+  
   /**
    * Fires the given number of torpedoes unless the launcher fails.
    *
