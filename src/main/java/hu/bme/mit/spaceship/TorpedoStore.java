@@ -28,7 +28,13 @@ public class TorpedoStore {
       }
     }
   }
-
+  /**
+   * Fires the given number of torpedoes unless the launcher fails.
+   *
+   * @param numberOfTorpedos number of torpedoes to fire, between 1 and the stored torpedo count
+   * @return true if the torpedoes were fired, false if the launcher failed to fire
+   * @throws IllegalArgumentException if the number is less than 1 or greater than the stored torpedo count
+   */
   public boolean fire(int numberOfTorpedos){
         if(numberOfTorpedos < 1 || numberOfTorpedos > this.torpedoCount){
       throw new IllegalArgumentException("numberOfTorpedos must be between 1 and " + this.torpedoCount);
